@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | 比勤奋更重要的，是深度思考的能力</title>
+  <title>Permutations | 比勤奋更重要的，是深度思考的能力</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="思路1、c++已经有响应的库函数实现了2、使用递归来解决，维护一个已经使用过的元素的链表，时间复杂度为O(n2)3、从第一元素开始一次和后面的元素进行位置交换，时间复杂度为n! 代码本次采用第三种算法来计算：   #include &amp;lt;cstdio&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;vec">
+<meta name="keywords" content="LeetCode,Algorithm,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/06/20/hello-world/index.html">
+<meta property="og:title" content="Permutations">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/Permutations/index.html">
 <meta property="og:site_name" content="比勤奋更重要的，是深度思考的能力">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-06-20T15:24:10.000Z">
+<meta property="og:description" content="思路1、c++已经有响应的库函数实现了2、使用递归来解决，维护一个已经使用过的元素的链表，时间复杂度为O(n2)3、从第一元素开始一次和后面的元素进行位置交换，时间复杂度为n! 代码本次采用第三种算法来计算：   #include &amp;lt;cstdio&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;vec">
+<meta property="og:updated_time" content="2017-09-09T17:51:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Permutations">
+<meta name="twitter:description" content="思路1、c++已经有响应的库函数实现了2、使用递归来解决，维护一个已经使用过的元素的链表，时间复杂度为O(n2)3、从第一元素开始一次和后面的元素进行位置交换，时间复杂度为n! 代码本次采用第三种算法来计算：   #include &amp;lt;cstdio&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;vec">
   
     <link rel="alternate" href="/atom.xml" title="比勤奋更重要的，是深度思考的能力" type="application/atom+xml">
   
@@ -67,12 +68,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Permutations" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/20/hello-world/" class="article-date">
-  <time datetime="2017-06-20T15:24:10.000Z" itemprop="datePublished">2017-06-20</time>
+    <a href="/2017/09/10/Permutations/" class="article-date">
+  <time datetime="2017-09-09T17:22:46.000Z" itemprop="datePublished">2017-09-10</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>►<a class="article-category-link" href="/categories/LeetCode/Algorithm/">Algorithm</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -81,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Permutations
     </h1>
   
 
@@ -89,37 +94,95 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>1、c++已经有响应的库函数实现了<br>2、使用递归来解决，维护一个已经使用过的元素的链表，时间复杂度为O(n2)<br>3、从第一元素开始一次和后面的元素进行位置交换，时间复杂度为n!</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>本次采用第三种算法来计算：  </p>
+<pre><code>#include &lt;cstdio&gt;
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
+using namespace std;
+class N46Permutations {
+public:
+    bool canSwap(vector&lt;int&gt; &amp;nums, int start, int end) {
+        for (int i = start; i &lt; end; i++) {
+            if (nums[i] == nums[end]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    void allRange(vector&lt;vector&lt;int&gt; &gt; &amp;vc, vector&lt;int&gt; &amp;nums, int start) {
+        if (start == nums.size() - 1) {
+            vector&lt;int&gt; ans;
+            for (int i = 0; i &lt; nums.size(); i++) {
+                ans.push_back(nums[i]);
+            }
+            vc.push_back(ans);
+            return;
+        }
+        for (int i = start; i &lt; nums.size(); i++) {
+            if (start !=i &amp;&amp; canSwap(nums, start, i)) {
+                swap(nums[start], nums[i]);
+                allRange(vc, nums, start + 1);
+                swap(nums[i], nums[start]);
+            }
+            if (start == i) {
+                allRange(vc, nums, start + 1);
+            }
+        }
+    }
+
+    vector&lt;vector&lt;int&gt;&gt; permuteUnique(vector&lt;int&gt; &amp;nums) {
+        vector&lt;vector&lt;int&gt; &gt; vc;
+        if (nums.empty()) {
+            return vc;
+        }
+        allRange(vc, nums, 0);
+        return vc;
+    }
+};
+
+int main() {
+    N46Permutations s;
+    vector&lt;int&gt; nums;
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    int ans;
+    vector&lt;vector&lt;int&gt; &gt; vc = s.permute(nums);
+    for (int i = 0; i &lt; vc.size(); i++) {
+        for (int j = 0; j &lt; vc[i].size(); j++) {
+            if (j != 0) {
+                cout &lt;&lt; &quot; &quot;;
+            }
+            cout &lt;&lt; vc[i][j];
+        }
+        cout &lt;&lt; endl;
+    }
+}
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/20/hello-world/" data-id="cj7dlxhxc0002469wp43hvun3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/09/10/Permutations/" data-id="cj7dlxhx80000469w9whyyivy" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/09/04/垃圾回收器与内存分配策略/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          垃圾回收器与内存分配策略
-        
-      </div>
-    </a>
   
+    <a href="/2017/09/10/l46/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Permutations</div>
+    </a>
   
 </nav>
 
